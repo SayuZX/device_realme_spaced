@@ -32,9 +32,13 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_PACKAGES += \
     fastbootd
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6781
+
 # Init
 PRODUCT_PACKAGES += \
-    init.mt6781.rc
+    init.mt6781.rc \
+    fstab.mt6781
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
