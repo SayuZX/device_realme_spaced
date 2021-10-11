@@ -1,0 +1,2 @@
+# APNs
+etc/apns-conf.xml:product/etc/apns-conf.xml
