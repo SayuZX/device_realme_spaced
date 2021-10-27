@@ -13,7 +13,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
 
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
