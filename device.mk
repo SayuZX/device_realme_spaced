@@ -61,7 +61,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.mt6781.rc \
-    fstab.mt6781
+    fstab.mt6781 \
+    perf_profile.sh
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
