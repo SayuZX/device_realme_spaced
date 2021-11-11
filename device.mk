@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
     init.mt6781.rc \
     fstab.mt6781
 
+# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
