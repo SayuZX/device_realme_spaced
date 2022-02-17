@@ -1,3 +1,7 @@
+# Bluetooth
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.bluetooth.bluetooth_audio_hal.disabled=true
+
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
