@@ -58,7 +58,8 @@ PRODUCT_COPY_FILES += \
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
-    libhwbinder
+    libhwbinder \
+    libhardware
 
 # ImsInit hack
 PRODUCT_PACKAGES += \
