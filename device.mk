@@ -96,3 +96,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# Call proprietary blob setup
+$(call inherit-product-if-exists, vendor/realme/spaced/spaced-vendor.mk)
