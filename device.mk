@@ -111,16 +111,6 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 PRODUCT_PACKAGES += \
     libshim_vtservice
 
-# Telephony
-PRODUCT_BOOT_JARS += \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
-
 PRODUCT_PACKAGES += \
     ImsServiceBase
 
@@ -130,4 +120,5 @@ PRODUCT_PACKAGES += \
     WifiOverlay
 
 # Call proprietary blob setup
-$(call inherit-product-if-exists, vendor/realme/spaced/spaced-vendor.mk)
+$(call inherit-product, vendor/realme/spaced/spaced-vendor.mk)
+$(call inherit-product, vendor/realme/ims-spaced/mtk-ims.mk)
