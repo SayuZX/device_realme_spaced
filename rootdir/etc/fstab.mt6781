@@ -33,5 +33,6 @@ odm                                              /odm                  ext4    r
 /dev/block/platform/bootdevice/by-name/misc                          /misc                 emmc    defaults                                                    defaults
 /dev/block/platform/bootdevice/by-name/logo                          /logo                 emmc    defaults                                                    defaults
 
-# External-Devices (OTG)
+# External-Devices (OTG | SD Card)
 /devices/platform/usb_xhci*                      auto                  vfat    defaults                                                    voldmanaged=usbotg:auto
+/devices/platform/externdevice*                  auto                  auto    defaults                                            voldmanaged=sdcard1:auto,encryptable=userdata
