@@ -16,6 +16,15 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
 
+# Log
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.log.tag.GED=S \
+    persist.log.tag.hwcomposer=S \
+    persist.log.tag.libnfc_nci=S \
+    persist.log.tag.libPowerHal=S \
+    persist.log.tag.mTEE=S \
+    persist.log.tag.mtkpower@impl=S
+
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
