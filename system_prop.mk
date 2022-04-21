@@ -29,6 +29,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.log.tag.mTEE=S \
     persist.log.tag.mtkpower@impl=S
 
+# Iorap
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
