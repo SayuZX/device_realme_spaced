@@ -6,6 +6,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
 
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.renderengine.backend=skiaglthreaded
+
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.realme.lockstate=0
