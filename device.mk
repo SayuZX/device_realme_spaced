@@ -122,7 +122,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
 # System prop
--include $(DEVICE_PATH)/system_prop.mk
+-include $(DEVICE_PATH)/system.prop
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Symbols
