@@ -74,3 +74,7 @@ on property:sys.boot_completed=1
 
 on property:persist.vendor.radio.port_index=""
     setprop sys.usb.config adb
+
+# Restrict permissions to socket file 
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
