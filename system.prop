@@ -30,6 +30,8 @@ dalvik.vm.dex2oat-threads=6
 
 # Display
 debug.sf.enable_hwc_vds=0
+debug.sf.high_fps_early_gl_phase_offset_ns=-2000000
+debug.sf.high_fps_late_sf_phase_offset_ns=-2000000
 
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
