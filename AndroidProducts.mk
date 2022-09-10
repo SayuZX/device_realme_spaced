@@ -15,4 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/corvus_spaced.mk
+    $(LOCAL_DIR)/komodo_spaced.mk
+
+COMMON_LUNCH_CHOICES := \
+        komodo_spaced-eng \
+        komodo_spaced-user \
+        komodo_spaced-userdebug
