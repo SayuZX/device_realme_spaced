@@ -1,0 +1,18 @@
+[
+  {
+    "repository": "android_vendor_realme_spaced",
+    "target_path": "vendor/realme/spaced"
+  },
+  {
+    "repository": "android_kernel_realme_spaced",
+    "target_path": "kernel/realme/spaced"
+  },
+  {
+    "repository": "android_vendor_realme_mtk-ims",
+    "target_path": "vendor/realme/mtk-ims"
+  },
+  {
+    "repository": "android_prebuilts_clang_host_linux-x86_clang-r437112",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-r437112"
+  }
+]
