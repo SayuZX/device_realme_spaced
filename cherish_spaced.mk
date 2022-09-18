@@ -21,14 +21,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/realme/spaced/device.mk)
 
-# Inherit some common komodo stuff.
-$(call inherit-product, vendor/komodo/config/common.mk)
+# Inherit some common CherishOS stuff.
+$(call inherit-product, vendor/cherish/config/common.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# b/189477034: Bypass build time check on uses_libs until vendor fixes all their apps
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+RELAX_USES_LIBRARY_CHECK := true
+
+# Cherish_Magic
+CHERISH_BUILD_TYPE := RELEASE
+CHERISH_VANILLA := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer=Rayhan77
+
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := komodo_spaced
+PRODUCT_NAME := cherish_spaced
 PRODUCT_DEVICE := spaced
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme 8i
