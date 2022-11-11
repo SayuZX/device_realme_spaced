@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/spaced/device.mk)
 
 # Inherit some common CherishOS stuff.
-$(call inherit-product, vendor/cherish/config/common.mk)
+$(call inherit-product, vendor/aosp/config/common.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
@@ -31,17 +31,11 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 RELAX_USES_LIBRARY_CHECK := true
 
-# Cherish_Magic
-CHERISH_BUILD_TYPE := RELEASE
-CHERISH_VANILLA := true
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.cherish.maintainer=Rayhan77
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cherish_spaced
+PRODUCT_NAME := aosp_spaced
 PRODUCT_DEVICE := spaced
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := Realme 8i
+PRODUCT_MODEL := Realme G96 Series
 PRODUCT_MANUFACTURER := realme
 
 # Build info
@@ -51,4 +45,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=spaced \
     PRIVATE_BUILD_DESC="sys_oplus_mssi_64_cn-user-11-RP1A.200720.011-mp8tc16sppr10V1-release-keys"
 
-PRODUCT_GMS_CLIENTID_BASE := android-oppo
+PRODUCT_GMS_CLIENTID_BASE := android-realme

@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/komodo_spaced.mk
+    $(LOCAL_DIR)/aosp_spaced.mk
 
 COMMON_LUNCH_CHOICES := \
-        komodo_spaced-eng \
-        komodo_spaced-user \
-        komodo_spaced-userdebug
+        aosp_spaced-eng \
+        aosp_spaced-user \
+        aosp_spaced-userdebug
