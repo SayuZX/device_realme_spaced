@@ -45,3 +45,25 @@ lib/libsink.so|a7f8fa44abac16851dc83c58a13407e65c6a2cb0
 lib/libsource.so|0e01c6c5d76e21629463d1f94d28d1b8f91c4c30
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+
+# APU Wares
+system_ext/lib/libapuwareapusys.mtk.so
+system_ext/lib/libapuwarehmp.mtk.so
+system_ext/lib/libapuwareutils.mtk.so
+system_ext/lib/libapuwarexrp.mtk.so
+system_ext/lib/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib/vendor.mediatek.hardware.apuware.xrp@1.0.so
+system_ext/lib64/libapuwareapusys.mtk.so
+system_ext/lib64/libapuwarehmp.mtk.so
+system_ext/lib64/libapuwareutils.mtk.so
+system_ext/lib64/libapuwarexrp.mtk.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.apusys@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
+system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
+
+# Bluetooth (AptX)
+lib64/libaptX_encoder.so
+lib64/libaptXHD_encoder.so
