@@ -20,5 +20,7 @@ ifeq ($(TARGET_DEVICE),spaced)
 
 $(call add-radio-file,releasetools/dynamic-remove-oplus)
 
+subdir_makefiles=$(call first-makefiles-under,$(LOCAL_PATH))
+  $(foreach mk,$(subdir_makefiles),$(info including $(mk) ...)$(eval include $(mk)))
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
