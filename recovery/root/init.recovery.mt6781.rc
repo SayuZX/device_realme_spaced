@@ -16,6 +16,15 @@ on fs
     wait /dev/block/platform/bootdevice/
     symlink /dev/block/platform/bootdevice/ /dev/block/bootdevice
 
+on property:sys.boot_completed=1
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
+service init-recovery-mt6781-sh /init.recovery.mt6781.sh
+    user root
+    group root
+    seclabel u:r:recovery:s0
+
 on fs && property:ro.debuggable=0
     # distinguish USB shoulde connect or not, i.e. CDP vs SDP
     write /sys/class/udc/musb-hdrc/device/cmode 2

@@ -8,6 +8,7 @@ system                                           /system               ext4    r
 vendor                                           /vendor               ext4    ro                                                          wait,avb,logical,first_stage_mount
 product                                          /product              ext4    ro                                                          wait,avb,logical,first_stage_mount
 odm                                              /odm                  ext4    ro                                                          wait,logical,first_stage_mount,nofail
+system_ext                                       /system_ext           ext4    ro                                                          wait,logical,first_stage_mount
 
 # Core Partitions
 /dev/block/platform/bootdevice/by-name/metadata                      /metadata             ext4    noatime,nosuid,nodev,discard                                wait,check,formattable,first_stage_mount

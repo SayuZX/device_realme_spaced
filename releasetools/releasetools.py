@@ -27,6 +27,7 @@ def FullOTA_InstallBegin(info):
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
+  OTA_InstallEnd(info, False)
 
 def IncrementalOTA_InstallEnd(info):
   OTA_InstallEnd(info)
