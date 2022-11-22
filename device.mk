@@ -32,7 +32,18 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/audio/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
+    $(DEVICE_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio.service \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio@6.0-util
+    libaudiofoundation.vendor \
+    libtinycompress \
+    libtinyxml
 
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -47,24 +58,121 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.spaced
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.6.vendor
+
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
 
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4-service.clearkey \
+    android.hardware.drm@1.3.vendor \
+    libdrm.vendor \
+    libmockdrmcryptoplugin
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
+
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
+    libhardware \
     libhwbinder \
-    libhardware
+    libhidltransport.vendor \
+    libhwbinder.vendor
+
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service
 
 # Configstore
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service \
     android.hardware.configstore@1.1-service
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    libkeymaster4.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libsoft_attestation_cert.vendor:64 \
+    libpuresoftkeymasterdevice.vendor:64
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
+# Neutral Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-V1-ndk_platform.vendor \
+    android.hardware.power@1.3.vendor
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio.deprecated@1.0.vendor
+
+
+# Renderscript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# Secure element
+PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.2.vendor
+
+# Sensors
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
+
 # ImsInit hack
 PRODUCT_PACKAGES += \
     ImsInit
+
+# Soundtrigger
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.3-impl
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@2.0.vendor
+
+# Textclassifier
+PRODUCT_PACKAGES += \
+    libtextclassifier_hash.vendor
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@2.0.vendor
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.1.vendor \
+    android.hardware.usb.gadget@1.1.vendor
 
 # Init
 PRODUCT_PACKAGES += \
@@ -110,6 +218,25 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1.vendor
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0.vendor \
+    android.hardware.gatekeeper@1.0-impl:64
+
+
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
 
 # System prop
 -include $(DEVICE_PATH)/system.prop
