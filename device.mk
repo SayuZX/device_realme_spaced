@@ -128,6 +128,7 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     DozeOverlaySystem \
     DozeOverlaySystemUI
+    NotchBarKiller
 
 # Call proprietary blob setup
 $(call inherit-product, vendor/realme/spaced/spaced-vendor.mk)
