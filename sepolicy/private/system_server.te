@@ -1,2 +1,4 @@
 # Allow system_server for smart charging and usb nodes
 allow system_server sysfs_battery_supply:file { getattr open read write };
+
+allow system_server vendor_sysfs_battery_supply:file r_file_perms;
