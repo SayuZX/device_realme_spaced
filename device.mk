@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    
     android.hardware.power-V1-ndk_platform.vendor \
     android.hardware.power@1.3.vendor
 
@@ -166,6 +167,8 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-impl \
     android.hardware.sensors@2.0-service
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # ImsInit hack
 PRODUCT_PACKAGES += \
@@ -234,6 +237,11 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     RcsService \
     PresencePolling
+
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-vendorcompat \
+    libprotobuf-cpp-lite-vendorcompat
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
