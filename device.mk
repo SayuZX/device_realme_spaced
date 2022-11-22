@@ -32,7 +32,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
+    $(DEVICE_PATH)/audio/configs/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
 
 # Dex
 PRODUCT_DEXPREOPT_SPEED_APPS += \
@@ -50,10 +50,6 @@ PRODUCT_PACKAGES += \
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.freeform_window_management.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.freeform_window_management.xml
-
-# GCam
-PRODUCT_PACKAGES += \
-    GoogleCameraGo
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -78,7 +74,7 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
+    $(DEVICE_PATH)/configs/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
 
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
