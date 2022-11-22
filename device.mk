@@ -60,7 +60,25 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor
+    android.hardware.bluetooth.a2dp@1.0 \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.a2dp@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libbtconfigstore
+
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.graphics.composer@2.1-resources \
+    android.hardware.graphics.composer@2.1-resources.vendor \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.memtrack@1.0.vendor \
+    libdrm.vendor \
+    libvulkan
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -86,6 +104,7 @@ PRODUCT_PACKAGES += \
 
 # Health
 PRODUCT_PACKAGES += \
+    android.hardware.health@2.0 \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
@@ -96,10 +115,6 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhidltransport.vendor \
     libhwbinder.vendor
-
-# Graphics
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-service
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -114,11 +129,6 @@ PRODUCT_PACKAGES += \
     libkeymaster_messages.vendor:64 \
     libsoft_attestation_cert.vendor:64 \
     libpuresoftkeymasterdevice.vendor:64
-
-# Memtrack
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
@@ -149,7 +159,13 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    libsensorndkbridge
+    libsensorndkbridge \
+    android.frameworks.sensorservice@1.0 \
+    android.hardware.sensors@2.0 \
+    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.0-impl \
+    android.hardware.sensors@2.0-service
+
 
 # ImsInit hack
 PRODUCT_PACKAGES += \
@@ -226,6 +242,8 @@ PRODUCT_SOONG_NAMESPACES += \
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \

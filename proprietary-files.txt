@@ -64,12 +64,6 @@ system_ext/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.utils@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.apuware.xrp@1.0.so
 
-# Bluetooth (AptX)
-lib64/libaptX_encoder.so
-lib64/libaptXHD_encoder.so
-
-
-
 # ADSP
 odm/lib64/libadsprpc.so
 
@@ -85,11 +79,9 @@ vendor/lib/libaudiocomponentenginec.so
 vendor/lib/libaudiocustparam_vendor.so
 vendor/lib/libaudiodcrflt_vendor.so
 vendor/lib/libaudiofmtconv.so
-vendor/lib/libaudiofoundation.so
 vendor/lib/libaudioloudc.so
 vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaudiotoolkit_vendor.so
-vendor/lib/libtinycompress.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/libaudio_engineer_test.so
@@ -101,11 +93,9 @@ vendor/lib64/libaudiocomponentenginec.so
 vendor/lib64/libaudiocustparam_vendor.so
 vendor/lib64/libaudiodcrflt_vendor.so
 vendor/lib64/libaudiofmtconv.so
-vendor/lib64/libaudiofoundation.so
 vendor/lib64/libaudioloudc.so
 vendor/lib64/libaudioprimarydevicehalifclient.so
 vendor/lib64/libaudiotoolkit_vendor.so
-vendor/lib64/libtinycompress.so
 
 # Audio-Hardware
 vendor/lib/hw/audio.primary.mt6781.so
@@ -346,7 +336,6 @@ vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/bluetooth_offload_audio_policy_configuration.xml
 vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib/hw/audio.bluetooth.default.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
@@ -359,7 +348,6 @@ vendor/lib/libbt-vendor.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib64/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
-vendor/lib64/hw/audio.bluetooth.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
 vendor/lib64/libbluetooth_audio_session.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
@@ -1560,7 +1548,17 @@ vendor/lib64/libwvhidl.so
 # Display-Hardware
 odm/bin/hw/vendor.oplus.hardware.displaypanelfeature@1.0-service
 odm/etc/init/vendor.oplus.hardware.displaypanelfeature@1.0-service.rc
--system_ext/framework/vendor.oplus.hardware.displaypanelfeature-V1.0-java.jar
+odm/lib/android.frameworks.bufferhub@1.0.so
+odm/lib/android.hardware.graphics.allocator@2.0.so
+odm/lib/android.hardware.graphics.allocator@3.0.so
+odm/lib/android.hardware.graphics.allocator@4.0.so
+odm/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
+odm/lib64/android.frameworks.bufferhub@1.0.so
+odm/lib64/android.hardware.graphics.allocator@2.0.so
+odm/lib64/android.hardware.graphics.allocator@3.0.so
+odm/lib64/android.hardware.graphics.allocator@4.0.so
+odm/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
+vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 system_ext/lib/vendor.oplus.hardware.displaypanelfeature@1.0.so
 system_ext/lib64/vendor.oplus.hardware.displaypanelfeature@1.0.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
@@ -1570,14 +1568,11 @@ vendor/lib/hw/android.hardware.graphics.composer@2.1-impl.so
 vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/hw/memtrack.mt6781.so
 vendor/lib/android.hardware.graphics.composer@2.1-resources.so
-vendor/lib/libdrm.so
 vendor/lib64/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib64/hw/android.hardware.graphics.composer@2.1-impl.so
 vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
-vendor/lib64/hw/android.hardware.memtrack@1.0-impl.so
 vendor/lib64/hw/hwcomposer.mt6781.so
 vendor/lib64/hw/memtrack.mt6781.so
-vendor/lib64/libdrm.so
 
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
@@ -1907,6 +1902,7 @@ vendor/lib/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib/vendor.mediatek.hardware.pq@2.4.so
 vendor/lib/vendor.mediatek.hardware.pq@2.5.so
 vendor/lib/vendor.mediatek.hardware.pq@2.6.so
+vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/hw/vendor.mediatek.hardware.keyinstall@1.0-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.mms@1.5-impl.so
@@ -2039,6 +2035,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
+vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.hostapd@2.0.so
 vendor/lib64/vendor.mediatek.hardware.wifi.supplicant@2.0.so
@@ -2087,10 +2084,8 @@ vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
 vendor/etc/init/init.thermal.rc
 vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
-vendor/lib/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib/libthermalalgo.so
-vendor/lib64/hw/android.hardware.thermal@1.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 
 # Thermal-Hardware
@@ -2166,39 +2161,25 @@ vendor/bin/aee_aedv
 vendor/bin/aee_aedv64
 vendor/bin/aee_dumpstatev
 vendor/bin/aeev
-vendor/bin/applypatch
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
 vendor/bin/bip
-vendor/bin/boringssl_self_test32
-vendor/bin/boringssl_self_test64
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/charon
-vendor/bin/chattr
 vendor/bin/dconfig
-vendor/bin/devmem
 vendor/bin/dexecutor
 vendor/bin/doeapp-memtester
 vendor/bin/doeapp-sat
 vendor/bin/dtc_vendor
-vendor/bin/dumpsys
 vendor/bin/em_hidl
 vendor/bin/epdg_wod
 vendor/bin/factory
-vendor/bin/fsync
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
-vendor/bin/getconf
 vendor/bin/gsm0710muxd
-vendor/bin/i2cdetect
-vendor/bin/i2cdump
-vendor/bin/i2cget
-vendor/bin/i2cset
-vendor/bin/iconv
-vendor/bin/install
 vendor/bin/ipsec_mon
 vendor/bin/jpegtool
 vendor/bin/lbs_hidl_service
@@ -2206,7 +2187,6 @@ vendor/bin/lib3a.ccu.ddr
 vendor/bin/lib3a.ccu.dm
 vendor/bin/lib3a.ccu.pm
 vendor/bin/loghidlvendorservice
-vendor/bin/lsattr
 vendor/bin/mcDriverDaemon
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
@@ -2215,33 +2195,23 @@ vendor/bin/mnld
 vendor/bin/mrdump_tool
 vendor/bin/mtk_agpsd
 vendor/bin/muxreport
-vendor/bin/nc
-vendor/bin/netcat
 vendor/bin/netdagent
 vendor/bin/netdc
-vendor/bin/nproc
-vendor/bin/nsenter
 vendor/bin/nusensors
 vendor/bin/nvram_daemon
 vendor/bin/ppl_agent
-vendor/bin/readelf
 vendor/bin/recordevent
 vendor/bin/replayevent
 vendor/bin/rttv
 vendor/bin/starter
 vendor/bin/stp_dump3
 vendor/bin/stroke
-vendor/bin/test
-vendor/bin/unlink
-vendor/bin/unshare
-vendor/bin/uuidgen
 vendor/bin/volte_imcb
 vendor/bin/volte_imsm_93
 vendor/bin/volte_md_status
 vendor/bin/volte_stack
 vendor/bin/volte_ua
 vendor/bin/vpud
-vendor/bin/watch
 vendor/bin/wfca
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
@@ -2270,7 +2240,6 @@ vendor/etc/init/aee_aedv64.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/init/bootperf.rc
-vendor/etc/init/boringssl_self_test.rc
 vendor/etc/init/camerahalserver.rc
 vendor/etc/init/em_hidl_user.rc
 vendor/etc/init/fuelgauged_init.rc
@@ -2584,7 +2553,6 @@ vendor/lib/libakm.so
 vendor/lib/libapusys.so
 vendor/lib/libarmnn_ndk.mtk.so
 vendor/lib/libaurisysdemo.so
-vendor/lib/libavservices_minijail.so
 vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libbwc.so
@@ -2630,8 +2598,6 @@ vendor/lib/libh264dec_sd.ca7.so
 vendor/lib/libh264dec_se.ca7.so
 vendor/lib/libh264enc_sa.ca7.so
 vendor/lib/libhevce_sb.ca7.android.so
-vendor/lib/libhidltransport.so
-vendor/lib/libhwbinder.so
 vendor/lib/libhwm.so
 vendor/lib/libhydra.so
 vendor/lib/libimageio.so
@@ -2673,15 +2639,12 @@ vendor/lib/libnvram_daemon_callback.so
 vendor/lib/libnvram_platform.so
 vendor/lib/libnvram_sec.so
 vendor/lib/libocam_common.so
-vendor/lib/libopus.so
 vendor/lib/libperfctl_vendor.so
 vendor/lib/libpixelflinger.so
 vendor/lib/libpowerhal.so
 vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpq_cust_base.so
 vendor/lib/libpq_prot.so
-vendor/lib/libprotobuf-cpp-full-3.9.1.so
-vendor/lib/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib/librgbwlightsensor.so
 vendor/lib/libscltm.so
 vendor/lib/libsi_sixth.so
@@ -2693,7 +2656,6 @@ vendor/lib/libstereoinfoaccessor_vsdof.so
 vendor/lib/libstorage_otp.so
 vendor/lib/libstrongswan.so
 vendor/lib/libsysenv.so
-vendor/lib/libtextclassifier_hash.so
 vendor/lib/libtflite_mtk.so
 vendor/lib/libtflite_mtk_static_R.so
 vendor/lib/libthha.so
@@ -2707,7 +2669,6 @@ vendor/lib/libvcodecdrv.so
 vendor/lib/libverno.so
 vendor/lib/libvolte_core_shr.so
 vendor/lib/libvolte_xdmc_shr.so
-vendor/lib/libvorbisidec.so
 vendor/lib/libvow_ap_testing.vendor.so
 vendor/lib/libvowp23_sid_testing.vendor.so
 vendor/lib/libvowp23_sid_training.vendor.so
@@ -2718,7 +2679,6 @@ vendor/lib/libvp8enc_sa.ca7.so
 vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib/libvpu.so
 vendor/lib/libvpud_vcodec.so
-vendor/lib/libvpx.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwapi.so
 vendor/lib/libwo.so
@@ -2835,8 +2795,6 @@ vendor/lib64/libgralloctypes_mtk.so
 vendor/lib64/libgz_gp_client.so
 vendor/lib64/libgz_uree.so
 vendor/lib64/libhevce_sb.ca7.android.so
-vendor/lib64/libhidltransport.so
-vendor/lib64/libhwbinder.so
 vendor/lib64/libhwm.so
 vendor/lib64/libhydra.so
 vendor/lib64/libifcutils_mtk.so
@@ -2885,8 +2843,6 @@ vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpq_prot.so
-vendor/lib64/libprotobuf-cpp-full-3.9.1.so
-vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 vendor/lib64/libratconfig.so
 vendor/lib64/librgbwlightsensor.so
 vendor/lib64/librilfusion.so
@@ -2895,14 +2851,12 @@ vendor/lib64/libscltm.so
 vendor/lib64/libsi_sixth.so
 vendor/lib64/libsimaka.so
 vendor/lib64/libskhynix_q2b_shared.so
-vendor/lib64/libsoft_attestation_cert.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libssl-md.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/libstrongswan.so
 vendor/lib64/libsysenv.so
-vendor/lib64/libtextclassifier_hash.so
 vendor/lib64/libtflite_mtk.so
 vendor/lib64/libtflite_mtk_static_R.so
 vendor/lib64/libthha.so
@@ -2931,3 +2885,13 @@ vendor/lib64/s5kjn1_mipi_raw_tuning.so
 vendor/lib64/vendor.trustonic.tee.tui@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.0.so
 vendor/lib64/vendor.trustonic.tee@1.1.so
+
+vendor/lib/hw/sound_trigger.primary.mt6781.so
+vendor/lib64/hw/sound_trigger.primary.mt6781.so
+vendor/bin/hw/android.hardware.sensors@2.0-service-mediatek
+vendor/etc/init/android.hardware.sensors@2.0-service-mediatek.rc
+vendor/lib/hw/vendor.mediatek.hardware.pq@2.7-impl.so
+odm/lib64/libhwm-oplus.so
+vendor/lib64/libhwm-oplus.so
+odm/lib/sensors.virtual.so
+odm/lib64/sensors.virtual.so
